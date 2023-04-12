@@ -6,13 +6,14 @@ A wave of layoffs has swept across American businesses in 2022.The cuts stem fro
 ### Specific Research Question:
 Exploring the factors that are most strongly associated with layoffs: We want to identify the key drivers of layoffs, such as changes in the industry, company performance, or macroeconomic factors. This can help investors and analysts better understand the underlying causes of layoffs and predict which companies are most at risk.
 We are trying to predict stock prices based on the company’s layoff number.
+Analyze the layoffs and stock price change happens in firms level, if not, analyze in sector level.
 ### Testing hypotheses:
 - H0: Companies that experience layoffs are more likely to experience a decline in stock prices compared to companies that do not experience layoffs.
 - H1: Companies that experience layoffs are unlikely to experience a decline in stock prices compared to companies that do not experience layoffs.
 
 ## Necessary Data
 ### The final dataset should include:
-1. The Observations should be GICS Sector
+1. The Observations should be Firms
 2. Sample Period: Oct 2020 - Jul 2022.
 3. Sample Conditions: 
     - GICS Sector: Financials, Information Technology, Industrials
