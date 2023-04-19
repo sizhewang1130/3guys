@@ -17,12 +17,10 @@ Analyze the layoffs and stock price change happens in firms level, if not, analy
 2. Sample Period: Oct 2020 - Jul 2022.
 3. Sample Conditions: 
     - GICS Sector: Financials, Information Technology, Industrials
-    - If available, use the period from Jan 2020 to Dec 2022.
 4. Variables (Stock price, Number of layoffs, Symbol, GICS Sector, News Positive Sentiment, News Negative Sentiment, Time Period) are necessary.
 ### Now dataset and some changes of the dataset:
-We already have data from Oct 2020 - Jul 2022 from Kaggle, we might do some changes to the raw code that the author provided to get data from Jan 2020 to Dec 2022. 
+We already have data from Oct 2020 - Jul 2022 from Kaggle, the dataset is clean enough to use
 ### Import Raw data: 
 https://www.kaggle.com/datasets/parsabg/stocknewseventssentiment-snes-10?select=data.csv 
-### Transform:
-Make changes to the raw code, and change the data period from Jan 2020 to Dec 2022. Got the new dataset to use. 
+### Transform
 
