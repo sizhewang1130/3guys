@@ -10,7 +10,7 @@ A wave of layoffs has swept across American businesses in 2022.The cuts stem fro
 3. Whether the changing of stock price would be different in differnt firm/sub-industry/Sector?
 4. Whether layoff new in on sub-industry/sector will affect another sub-industry/sector stock price?
     - correlation 
-### Testing hypotheses:
+### Testing hypothesis:
 - H0: Companies that experience layoffs are more likely to experience a decline in stock prices compared to companies that do not experience layoffs.
 - H1: Companies that experience layoffs are unlikely to experience a decline in stock prices compared to companies that do not experience layoffs.
 
@@ -30,13 +30,28 @@ A wave of layoffs has swept across American businesses in 2022.The cuts stem fro
 7. Report
 
 ## Necessary Data
-### The final dataset should include:
 1. The Observations should be Symbol.
 2. Sample Period: Oct 2020 - Jul 2022.
-3. 
+
 ### Now dataset and some changes of the dataset:
-We have cleaned data already, remove "Open", "High", "Low", "Close", "Volume", "Security" columns. 
-Have to Calculate Daily Return Value, 
+- We have cleaned data already provided by Parsa Ghaffari and Parsa Ghaffari in Kaggle.
+- The data already merged with SP 500.
+- We need to calculate Daily Return Value, create dummy variables for news. 
+- Remove some irrelavent columns ("Open", "High", "Low", "Close", "Volume", "Security").
+- 10-k file sentiment analysis (considering)
+
+### The final dataset should include:
+1. Date
+2. Symbol
+3. GICS sector
+4. GICS sub-industry
+5. Adj.Close
+6. Return Value
+7. layoff news(1/0)
+8. number of company layoff news
+9. number of GICS sub-industry layoff news
+10. number of GICS Sector layoff news
+
 ### Import Raw data: 
 https://www.kaggle.com/datasets/parsabg/stocknewseventssentiment-snes-10?select=data.csv 
 ### Transform
