@@ -3,24 +3,43 @@ By Sizhe Wang, Chengxi Wu, and Jerrick Ren
 ## Research Question
 ### Big picture:
 A wave of layoffs has swept across American businesses in 2022.The cuts stem from slower business growth, inflation paired with rising labor costs.Our project is focus on illustrating the company’s stock price changing that caused by the layoff and  finding out the correlation between them.This can help investors and analysts evaluate the potential risks and opportunities associated with layoffs and make informed investment decisions.
+
 ### Specific Research Question:
-Exploring the factors that are most strongly associated with layoffs: We want to identify the key drivers of layoffs, such as changes in the industry, company performance, or macroeconomic factors. This can help investors and analysts better understand the underlying causes of layoffs and predict which companies are most at risk.
-We are trying to predict stock prices based on the company’s layoff number.
-Analyze the layoffs and stock price change happens in firms level, if not, analyze in sector level.
+1. Whether the layoff would affect stock price? If yes, positive or negative?
+2. How does stock prive react to the different number of layoff news?
+3. Whether the changing of stock price would be different in differnt firm/sub-industry/Sector?
+4. Whether layoff new in on sub-industry/sector will affect another sub-industry/sector stock price?
+    - correlation 
 ### Testing hypotheses:
 - H0: Companies that experience layoffs are more likely to experience a decline in stock prices compared to companies that do not experience layoffs.
 - H1: Companies that experience layoffs are unlikely to experience a decline in stock prices compared to companies that do not experience layoffs.
 
+### steps 
+1. Download bad data 
+2. select related predictors
+3. Allocate the Adj close one day after layoff announcement 
+    - The number of media coverage of layoff
+    - Calculate daily Return value (Ho-Non-Hypothesis)
+4. Regression modeling
+    - (Return Value ~ # of firms layoff news + # of sub-industry layoff news)-summary the model 
+5. visualization
+    - replot 
+    - time series 
+    - correlation plot 
+6. Analysis
+7. Report
+
 ## Necessary Data
 ### The final dataset should include:
-1. The Observations should be Firms
+1. The Observations should be Symbol.
 2. Sample Period: Oct 2020 - Jul 2022.
-3. Sample Conditions: 
-    - GICS Sector: Financials, Information Technology, Industrials
-4. Variables (Stock price, Number of layoffs, Symbol, GICS Sector, News Positive Sentiment, News Negative Sentiment, Time Period) are necessary.
+3. 
 ### Now dataset and some changes of the dataset:
-We already have data from Oct 2020 - Jul 2022 from Kaggle, the dataset is clean enough to use
+We have cleaned data already, remove "Open", "High", "Low", "Close", "Volume", "Security" columns. 
+Have to Calculate Daily Return Value, 
 ### Import Raw data: 
 https://www.kaggle.com/datasets/parsabg/stocknewseventssentiment-snes-10?select=data.csv 
 ### Transform
-
+```
+stock[Daily RV]=stock["Adj.Close"].pct_change()
+```
