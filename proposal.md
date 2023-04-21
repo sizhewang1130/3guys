@@ -74,6 +74,9 @@ return_values = np.random.rand(7)
 layoff_news = np.random.randint(2, size=7)
 num_company_layoff_news = np.random.randint(10, 50, size=7)
 
+# Set num_company_layoff_news to 0 if layoff_news is 0
+num_company_layoff_news[layoff_news == 0] = 0
+
 # Create the dataframe
 data = {'Date': dates,
         'Symbol': symbols,
@@ -93,4 +96,5 @@ df['number of GICS Sector layoff news'] = df.groupby('GICS sector')['number of c
 df
 ```
 
-![image](https://user-images.githubusercontent.com/111511037/233720047-f031d14c-9f80-4b41-bba0-70fa256c7cb0.png)
+![image](https://user-images.githubusercontent.com/111511037/233721753-a4472465-ace8-459f-aa30-d0f6e4ec87e5.png)
+
