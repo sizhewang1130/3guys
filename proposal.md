@@ -22,6 +22,7 @@ A wave of layoffs has swept across American businesses in 2022.The cuts stem fro
     - Calculate daily Return value (Ho-Non-Hypothesis)
 4. Regression modeling
     - (Return Value ~ # of firms layoff news + # of sub-industry layoff news)-summary the model 
+    - Another regression model to check which kind of news is the most important varaibles with stock price
 5. visualization
     - replot 
     - time series 
