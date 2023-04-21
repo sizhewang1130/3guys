@@ -58,3 +58,39 @@ https://www.kaggle.com/datasets/parsabg/stocknewseventssentiment-snes-10?select=
 ```
 stock[Daily RV]=stock["Adj.Close"].pct_change()
 ```
+
+## How final dataset looks like:
+```
+import pandas as pd
+import numpy as np
+
+# Create some fake data
+dates = pd.date_range('20220101', periods=7)
+symbols = ['AAPL', 'GOOG', 'AMZN', 'FB', 'NFLX', 'TSLA', 'MSFT'][:7]
+gics_sectors = ['Technology', 'Technology', 'Consumer Discretionary', 'Communication Services', 'Communication Services', 'Consumer Discretionary', 'Technology'][:7]
+gics_sub_industries = ['Internet Services & Products', 'Internet Services & Products', 'Internet & Direct Marketing Retail', 'Interactive Media & Services', 'Movies & Entertainment', 'Internet & Direct Marketing Retail', 'Systems Software'][:7]
+adj_closes = np.random.randint(100, 1000, size=7)
+return_values = np.random.rand(7)
+layoff_news = np.random.randint(2, size=7)
+num_company_layoff_news = np.random.randint(10, 50, size=7)
+
+# Create the dataframe
+data = {'Date': dates,
+        'Symbol': symbols,
+        'GICS sector': gics_sectors,
+        'GICS sub-industry': gics_sub_industries,
+        'Adj.Close': adj_closes,
+        'Return Value': return_values,
+        'layoff news(1/0)': layoff_news,
+        'number of company layoff news': num_company_layoff_news}
+
+df = pd.DataFrame(data)
+
+# Group the dataframe by GICS sub-industry and assign the sum of num_sub_industry_layoff_news for each group
+df['number of GICS sub-industry layoff news'] = df.groupby('GICS sub-industry')['number of company layoff news'].transform('sum')
+df['number of GICS Sector layoff news'] = df.groupby('GICS sector')['number of company layoff news'].transform('sum')
+
+df
+```
+
+![image](https://user-images.githubusercontent.com/111511037/233720047-f031d14c-9f80-4b41-bba0-70fa256c7cb0.png)
