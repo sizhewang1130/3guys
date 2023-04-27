@@ -6,55 +6,59 @@ A wave of layoffs has swept across American businesses in 2022.The cuts stem fro
 
 ### Specific Research Question:
 1. Whether the layoff would affect stock price? If yes, positive or negative?
-2. How does stock prive react to the different number of layoff news?
-3. Whether the changing of stock price would be different in differnt firm/sub-industry/Sector?
-4. Whether layoff new in on sub-industry/sector will affect another sub-industry/sector stock price?
-    - correlation 
+2. Whether the changing of stock price would be different in differnt industry?
 ### Testing hypothesis:
-- H0: Companies that experience layoffs are more likely to experience a decline in stock prices compared to companies that do not experience layoffs.
-- H1: Companies that experience layoffs are unlikely to experience a decline in stock prices compared to companies that do not experience layoffs.
+- H0: Companies/industry that experience layoffs are more likely to experience a decline in stock prices compared to companies that do not experience layoffs.
+- H1: Companies/industry that experience layoffs are unlikely to experience a decline in stock prices compared to companies that do not experience layoffs.
 
 ### steps 
-1. Download bad data 
-2. select related predictors
-3. Allocate the Adj close one day after layoff announcement 
-    - The number of media coverage of layoff
-    - Calculate daily Return value (Ho-Non-Hypothesis)
-4. Regression modeling
-    - (Return Value ~ # of firms layoff news + # of sub-industry layoff news)-summary the model 
-    - Another regression model to check which kind of news is the most important varaibles with stock price
-5. visualization
-    - replot 
-    - time series 
-    - correlation plot 
-6. Analysis
-7. Report
+1. Download layoff data and yfinance stock price.
+2. Merge data by tickers (layoff data and yfinance stock price)
+3. export to a new csv
+4. import the new csv we just made
+5. select related predictors
+6. Calculate daily Return value
+7. Regression modeling
+8. . visualization
+    - regplot
+    - bar chart
+    - pie plot
+9. Analysis
+10. Report
 
 ## Necessary Data
-1. The Observations should be Symbol.
-2. Sample Period: Oct 2020 - Jul 2022.
+1. The Observations should be ticker.
+2. Sample Period: Jan 1, 2020 to Mar 31, 2023
 
 ### Now dataset and some changes of the dataset:
-- We have cleaned data already provided by Parsa Ghaffari and Parsa Ghaffari in Kaggle.
-- The data already merged with SP 500.
-- We need to calculate Daily Return Value, create dummy variables for news. 
-- Remove some irrelavent columns ("Open", "High", "Low", "Close", "Volume", "Security").
-- 10-k file sentiment analysis (considering)
+- Our dataset having Laid_Off_Count and some company's basic information already
+- We have to get the ticker by company name (Manully)
+- Have to get the stock price within yfinance
+- Have to calculate Daily Return Value
+```
+stock[Daily RV]=stock["Adj.Close"].pct_change()
+```
 
 ### The final dataset should include:
 1. Date
-2. Symbol
-3. GICS sector
-4. GICS sub-industry
-5. Adj.Close
-6. Return Value
-7. layoff news(1/0)
-8. number of company layoff news
-9. number of GICS sub-industry layoff news
-10. number of GICS Sector layoff news
+2. ticker
+3. Industry
+4. Stock Price
+5. Daily Return Value today 
+6. Daily Return Value yesterday
+7. Daily Return Value tomorrow
+8. Location
+9. Laid_Off_Count
+10. Laid_Off_Percentage
+11. Stage
+12. Country
+13. Market Daily Return Value today 
+14. Market Daily Return Value tomorrow
+15. log(Laid_Off_Count)
+16. Diff
 
-### Import Raw data: 
-https://www.kaggle.com/datasets/parsabg/stocknewseventssentiment-snes-10?select=data.csv 
+### Raw data: 
+https://www.kaggle.com/datasets/swaptr/layoffs-2022
 ### Transform
 ```
 stock[Daily RV]=stock["Adj.Close"].pct_change()
@@ -65,37 +69,51 @@ stock[Daily RV]=stock["Adj.Close"].pct_change()
 import pandas as pd
 import numpy as np
 
-# Create some fake data
-dates = pd.date_range('20220101', periods=7)
-symbols = ['AAPL', 'GOOG', 'AMZN', 'FB', 'NFLX', 'TSLA', 'MSFT'][:7]
-gics_sectors = ['Technology', 'Technology', 'Consumer Discretionary', 'Communication Services', 'Communication Services', 'Consumer Discretionary', 'Technology'][:7]
-gics_sub_industries = ['Internet Services & Products', 'Internet Services & Products', 'Internet & Direct Marketing Retail', 'Interactive Media & Services', 'Movies & Entertainment', 'Internet & Direct Marketing Retail', 'Systems Software'][:7]
-adj_closes = np.random.randint(100, 1000, size=7)
-return_values = np.random.rand(7)
-layoff_news = np.random.randint(2, size=7)
-num_company_layoff_news = np.random.randint(10, 50, size=7)
+# Generate fake data
+dates = pd.date_range(start='2023-04-20', periods=7)
+tickers = ['TICK' + str(i) for i in range(1, 8)]
+industries = ['Industry' + str(i) for i in range(1, 8)]
+stock_prices = np.random.uniform(10, 200, 7)
+daily_returns_today = np.random.normal(0, 0.01, 7)
+daily_returns_yesterday = np.random.normal(0, 0.01, 7)
+daily_returns_tomorrow = np.random.normal(0, 0.01, 7)
+locations = ['Location' + str(i) for i in range(1, 8)]
+laid_off_counts = np.random.randint(10, 100, 7)
+laid_off_percentages = np.random.uniform(0.1, 0.5, 7)
+stages = ['Stage' + str(i) for i in range(1, 8)]
+countries = ['Country' + str(i) for i in range(1, 8)]
+market_daily_return_value_today = np.random.normal(0, 0.01)
+market_daily_returns_today = [market_daily_return_value_today] * 7
+market_daily_return_value_tomorrow = np.random.normal(0, 0.01)
+market_daily_returns_tomorrow = [market_daily_return_value_tomorrow] * 7
+log_laid_off_counts = np.log(laid_off_counts)
+diffs = daily_returns_today - market_daily_returns_today
 
-# Set num_company_layoff_news to 0 if layoff_news is 0
-num_company_layoff_news[layoff_news == 0] = 0
-
-# Create the dataframe
-data = {'Date': dates,
-        'Symbol': symbols,
-        'GICS sector': gics_sectors,
-        'GICS sub-industry': gics_sub_industries,
-        'Adj.Close': adj_closes,
-        'Return Value': return_values,
-        'layoff news(1/0)': layoff_news,
-        'number of company layoff news': num_company_layoff_news}
+# Create the DataFrame
+data = {
+    'Date': dates,
+    'ticker': tickers,
+    'Industry': industries,
+    'Stock Price': stock_prices,
+    'Daily Return Value today': daily_returns_today,
+    'Daily Return Value yesterday': daily_returns_yesterday,
+    'Daily Return Value tomorrow': daily_returns_tomorrow,
+    'Location': locations,
+    'Laid_Off_Count': laid_off_counts,
+    'Laid_Off_Percentage': laid_off_percentages,
+    'Stage': stages,
+    'Country': countries,
+    'Market Daily Return Value today': market_daily_returns_today,
+    'Market Daily Return Value tomorrow': market_daily_returns_tomorrow,
+    'log(Laid_Off_Count)': log_laid_off_counts,
+    'Diff': diffs
+}
 
 df = pd.DataFrame(data)
 
-# Group the dataframe by GICS sub-industry and assign the sum of num_sub_industry_layoff_news for each group
-df['number of GICS sub-industry layoff news'] = df.groupby('GICS sub-industry')['number of company layoff news'].transform('sum')
-df['number of GICS Sector layoff news'] = df.groupby('GICS sector')['number of company layoff news'].transform('sum')
-
+# Display the DataFrame
 df
 ```
 
-![image](https://user-images.githubusercontent.com/111511037/233721753-a4472465-ace8-459f-aa30-d0f6e4ec87e5.png)
+![image](https://user-images.githubusercontent.com/112133489/234997811-91e33561-63a7-47ac-b0a5-dd3bfd9476d8.png)
 
