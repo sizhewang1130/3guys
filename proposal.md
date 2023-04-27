@@ -88,6 +88,7 @@ market_daily_return_value_tomorrow = np.random.normal(0, 0.01)
 market_daily_returns_tomorrow = [market_daily_return_value_tomorrow] * 7
 log_laid_off_counts = np.log(laid_off_counts)
 diffs = daily_returns_today - market_daily_returns_today
+l_diff = np.log(diffs)
 
 # Create the DataFrame
 data = {
@@ -106,14 +107,17 @@ data = {
     'Market Daily Return Value today': market_daily_returns_today,
     'Market Daily Return Value tomorrow': market_daily_returns_tomorrow,
     'log(Laid_Off_Count)': log_laid_off_counts,
-    'Diff': diffs
+    'Diff': diffs,
+    'log(Diff)': l_diff
 }
 
 df = pd.DataFrame(data)
 
 # Display the DataFrame
 df
+
 ```
 
-![image](https://user-images.githubusercontent.com/112133489/234997811-91e33561-63a7-47ac-b0a5-dd3bfd9476d8.png)
+![image](https://user-images.githubusercontent.com/112133489/235004747-0e3b8bd6-47b9-4710-b455-5872401f32dc.png)
+
 
