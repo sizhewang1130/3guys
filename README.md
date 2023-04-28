@@ -55,14 +55,11 @@ Here are some graphs that we created in our analysis. We saved them to the `pics
 
 [top 10 location layoff](https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/f2c89fb78b3a4efbd058bc180815216b9c084e4d/top%2010%20location%20layoff.html)
 <br><br>
-Some analysis here
+[Stage vs Layoff](https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/main/stage%20vs%20layoff.html)
 <br><br>
-![](pics/plot2.png)
+[top 10 companies layoff] (https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/main/top%2010%20company%20layoff.html)
 <br><br>
-More analysis here.
-<br><br>
-![](pics/plot3.png)
-<br><br>
+[Stock price change](https://github.com/sizhewanglehigh/3guys/blob/main/stock%20price%20change.html)
 More analysis.
 
 ## Summary <a name="summary"></a>
