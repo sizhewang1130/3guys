@@ -53,7 +53,7 @@ This is a subsection, formatted in heading 3 style
 
 Here are some graphs that we created in our analysis. We saved them to the `pics/` subfolder and include them via the usual markdown syntax for pictures.
 
-![](pics/plot1.png)
+![Stage vs Layoff](stage vs layoff.html)
 <br><br>
 Some analysis here
 <br><br>
