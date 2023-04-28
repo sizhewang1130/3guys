@@ -53,7 +53,7 @@ This is a subsection, formatted in heading 3 style
 
 Here are some graphs that we created in our analysis. We saved them to the `pics/` subfolder and include them via the usual markdown syntax for pictures.
 
-![](stage vs layoff.html)
+[top 10 location layoff](https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/f2c89fb78b3a4efbd058bc180815216b9c084e4d/top%2010%20location%20layoff.html)
 <br><br>
 Some analysis here
 <br><br>
