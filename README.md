@@ -59,7 +59,7 @@ Here are some graphs that we created in our analysis. We saved them to the `pics
 <br><br>
 [top 10 companies layoff](https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/main/top%2010%20company%20layoff.html)
 <br><br>
-[Stock price change](https://github.com/sizhewanglehigh/3guys/blob/main/stock%20price%20change.html)
+[Stock price change](https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/main/stock%20price%20change.html)
 
 More analysis.
 
