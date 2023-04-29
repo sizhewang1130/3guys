@@ -135,13 +135,17 @@ Blah blah
 
 ## About the team
 
-<img src="pics/julio.jpg" alt="julio" width="300"/>
+<img src="031013c219dd41d2366805bc591182e.jpg" alt="Damon" width='300'/>
 <br>
-Julio is a senior at Lehigh studying finance.
+Damon is a Master stdent at Lehigh studying Business Analytics.
 <br><br><br>
-<img src="pics/don2.jpg" alt="don" width="300"/>
+<img src="selfie.jpg" alt="Sizhe" width='300'/>
 <br>
-Don is an assistant professor at Lehigh.
+Sizhe is a Master stdent at Lehigh studying Business Analytics.
+<br><br><br>
+<img src="a2b8ec7db8bde8ded08644bef9769e2.jpg" alt="Jerrick" width='300'/>
+<br>
+Jerrick is a MBA student at Lehigh University
 
 
 ## More 
