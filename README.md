@@ -20,6 +20,7 @@ Recent years have been marked by a wave of layoffs that has swept across America
 
 
 ## Methodology <a name="meth"></a>
+We only selected companies in the United States and only chose companies whose stocks are traded on the public market.
 
 Here is some code that we used to develop our analysis. [More details are provided in the Appendix](page2).
  
