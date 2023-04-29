@@ -116,8 +116,6 @@ This is a subsection, formatted in heading 3 style
 
 ## Analysis Section <a name="section3"></a>
 
-Here are some graphs that we created in our analysis. We saved them to the `pics/` subfolder and include them via the usual markdown syntax for pictures.
-
 [top 10 location layoff](https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/main/top%2010%20location%20layoff.html)
 
 It is useful to analyze which industries are experiencing the most job losses. This information can provide insights into which sectors of the economy are struggling, and can help policymakers and businesses develop strategies to address the problem
@@ -137,9 +135,7 @@ More analysis.
 
 ## Summary <a name="summary"></a>
 
-Blah blah
-
-
+Overall, we found that there was no significant correlation between a company's layoff rate and changes in its stock price, as a company's stock price can be influenced by a variety of factors. Additionally, we found that layoff rates vary across different industries and regions, with higher layoff rates being more common in industries with closer ties to the economy. In terms of stock prices, different companies experience different changes, and we cannot simply judge changes in stock price based solely on whether or not the company has laid off employees or the number of employees laid off.
 
 ## About the team
 
