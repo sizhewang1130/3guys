@@ -136,11 +136,7 @@ By analyzing the data and identifying how layoffs have affected stock prices, in
 More analysis.
 
 ## Summary <a name="summary"></a>
-
-Blah blah
-
-
-
+Overall, we found that there was no significant correlation between a company's layoff rate and changes in its stock price, as a company's stock price can be influenced by a variety of factors. Additionally, we found that layoff rates vary across different industries and regions, with higher layoff rates being more common in industries with closer ties to the economy. In terms of stock prices, different companies experience different changes, and we cannot simply judge changes in stock price based solely on whether or not the company has laid off employees or the number of employees laid off.
 ## About the team
 
 <img src="031013c219dd41d2366805bc591182e.jpg" alt="Damon" width='300'/>
