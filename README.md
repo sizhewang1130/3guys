@@ -119,13 +119,20 @@ This is a subsection, formatted in heading 3 style
 Here are some graphs that we created in our analysis. We saved them to the `pics/` subfolder and include them via the usual markdown syntax for pictures.
 
 [top 10 location layoff](https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/main/top%2010%20location%20layoff.html)
+
+It is useful to analyze which industries are experiencing the most job losses. This information can provide insights into which sectors of the economy are struggling, and can help policymakers and businesses develop strategies to address the problem
 <br><br>
 [Industry vs Layoff](https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/main/Industry%20vs%20layoff.html)
+
+By analyzing the data and identifying which industries have been most affected by layoffs, policymakers and businesses can develop strategies to support workers and help the affected industries recover. This may include providing financial support or training programs to help workers transition to new jobs or supporting the growth of industries that are less affected by job losses.
 <br><br>
 [top 10 companies layoff](https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/main/top%2010%20company%20layoff.html)
+
+By analyzing the data and identifying which companies have been most affected by layoffs, policymakers and businesses can develop strategies to support workers and help the affected companies recover. This may include providing financial support or training programs to help workers transition to new jobs or supporting the growth of companies that are less affected by job losses. It can also help investors and shareholders understand which companies may be facing challenges and inform their investment decisions.
 <br><br>
 [Stock price change](https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/main/stock%20price%20change.html)
 
+By analyzing the data and identifying how layoffs have affected stock prices, investors and analysts can make more informed investment decisions and adjust their expectations for the future performance of the companies in question.
 More analysis.
 
 ## Summary <a name="summary"></a>
