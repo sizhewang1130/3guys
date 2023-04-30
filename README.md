@@ -2,12 +2,14 @@
 
 This is a website to showcase our final project for FIN 377 - Data Science for Finance course at Lehigh University.
 
-To see the complete analysis file(s) click [here](https://github.com/sizhewanglehigh/3guys/blob/main/code.ipynb).
+## The files should be accessed in this order:
+- [data.ipynb](https://github.com/sizhewanglehigh/3guys/blob/main/data.ipynb)
+- [code.ipynb](https://github.com/sizhewanglehigh/3guys/blob/main/code.ipynb)
 
 ## Table of contents
 1. [Introduction](#introduction)
 2. [Methodology](#meth)
-3. [Section 2](#section2)
+3. [Data processing](#data)
 4. [Analysis Section](#section3)
 5. [Summary](#summary)
 
@@ -15,13 +17,11 @@ To see the complete analysis file(s) click [here](https://github.com/sizhewangle
 
 Recent years have been marked by a wave of layoffs that has swept across American businesses, leaving a trail of job losses and economic uncertainty in its wake. The pandemic has disrupted industries across the board, with many companies facing a decline in revenues and profits. In response, businesses have been forced to make difficult decisions, with layoffs becoming an increasingly common strategy for reducing costs and improving their bottom line. The cuts have affected a broad range of industries, from hospitality and retail to finance and technology. While some companies have been able to weather the storm and maintain their profitability, others have struggled to stay afloat, with layoffs becoming a necessary and sometimes painful step. Our project seeks to shed light on the impact of layoffs on the stock prices of affected companies, as well as the broader economic implications of these cuts. By analyzing the stock prices of companies before and after a layoff announcement, we aim to identify any patterns or trends that may exist. Ultimately, our goal is to provide valuable insights to investors and analysts, helping them to evaluate the potential risks and opportunities associated with layoffs and make informed investment decisions. By providing a deeper understanding of the impact of layoffs on the economy and the stock market, we hope to contribute to a more informed and nuanced conversation around this important issue.
 
-
-
 ## Methodology <a name="meth"></a>
 We only selected companies in the United States and only chose companies whose stocks are traded on the public market.
+<br>
+Here is some code that we used to develop our analysis.
 
-Here is some code that we used to develop our analysis. [More details are provided in the Appendix](page2).
- 
 ###  top 10 companies layoff
 ```python
 
@@ -103,8 +103,9 @@ reg1.summary()
 ```
 
 
-## Section2 <a name="section2"></a>
-Our main data sources are Yahoo Finance and layoff data from kaggle. To acquire adj close price and daily return for each firms, we first set up the start time and end time, after that, we use the .pct_change to get daily return. After we got the daily return, we merge it with layoff data, and we save this dataset as ‘newdata.csv’.
+## Data Processing <a name="data"></a>
+Our main data sources are Yahoo Finance and layoff data from kaggle. To acquire adj close price and daily return for each firms, we first set up the start time and end time, after that, we use the .pct_change to get daily return. After we got the daily return, we merge it with layoff data, and we save this dataset as ‘newdata.csv’.\
+<br>
 During the period under investigation, we downloaded the daily prices of the S&P 500 stock market index and calculated the daily return for each day using the same method. We then calculated the daily return for each company and subtracted the daily return of the S&P 500 from it, resulting in a difference between the two. We also took the logarithm of this difference and Laid_Off_Count, which allowed us to better analyze the data and identify patterns or trends
 
 ## Analysis Section <a name="section3"></a>
@@ -130,8 +131,8 @@ More analysis.
 
 ## Summary <a name="summary"></a>
 Overall, we found that there was no significant correlation between a company's layoff rate and changes in its stock price, as a company's stock price can be influenced by a variety of factors. Additionally, we found that layoff rates vary across different industries and regions, with higher layoff rates being more common in industries with closer ties to the economy. In terms of stock prices, different companies experience different changes, and we cannot simply judge changes in stock price based solely on whether or not the company has laid off employees or the number of employees laid off.
+<br>
 ## About the team
-
 <img src="031013c219dd41d2366805bc591182e.jpg" alt="Damon" width='300'/>
 <br>
 Damon is a Master student at Lehigh studying Business Analytics.
@@ -144,7 +145,6 @@ Sizhe is a Master student at Lehigh studying Business Analytics.
 <br>
 Jerrick is a MBA student at Lehigh University
 
-
 ## More 
 
-To view the GitHub repo for this website, click [here](https://github.com/donbowen/teamproject).
+To view the GitHub repo for this website, click [here](https://github.com/sizhewanglehigh/3guys).
