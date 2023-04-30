@@ -8,8 +8,6 @@ To see the complete analysis file(s) click [here](https://github.com/sizhewangle
 1. [Introduction](#introduction)
 2. [Methodology](#meth)
 3. [Section 2](#section2)
-    1. [Subsection](#subsec2-1)
-    2. [Subsection](#subsec2-2)
 4. [Analysis Section](#section3)
 5. [Summary](#summary)
 
@@ -105,14 +103,9 @@ reg1.summary()
 ```
 
 
-## Data <a name="section2"></a>
-Our main data sources are Yahoo Finance and layoff data from kaggle. Our research target mainly focus on American companies. To acquire adj close price in each firms, we merged tickers in layoff data and Yahoo Finance data. Then, we use the .pct_change() to calculate return. 
-
-### Subsection 1 <a name="subsec2-1"></a>
-This is a subsection, formatted in heading 3 style
-
-### Subsection 2 <a name="subsec2-2"></a>
-This is a subsection, formatted in heading 3 style
+## Section2 <a name="section2"></a>
+Our main data sources are Yahoo Finance and layoff data from kaggle. To acquire adj close price and daily return for each firms, we first set up the start time and end time, after that, we use the .pct_change to get daily return. After we got the daily return, we merge it with layoff data, and we save this dataset as ‘newdata.csv’.
+During the period under investigation, we downloaded the daily prices of the S&P 500 stock market index and calculated the daily return for each day using the same method. We then calculated the daily return for each company and subtracted the daily return of the S&P 500 from it, resulting in a difference between the two. We also took the logarithm of this difference and Laid_Off_Count, which allowed us to better analyze the data and identify patterns or trends
 
 ## Analysis Section <a name="section3"></a>
 
