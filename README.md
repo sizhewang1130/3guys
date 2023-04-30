@@ -5,6 +5,7 @@ This is a website to showcase our final project for FIN 377 - Data Science for F
 ## The files should be accessed in this order:
 - [data.ipynb](https://github.com/sizhewanglehigh/3guys/blob/main/data.ipynb)
 - [code.ipynb](https://github.com/sizhewanglehigh/3guys/blob/main/code.ipynb)
+- [data visualization.ipynb](https://github.com/sizhewanglehigh/3guys/blob/main/Data%20Visualization.ipynb)
 
 ## Table of contents
 1. [Introduction](#introduction)
