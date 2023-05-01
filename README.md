@@ -111,7 +111,27 @@ During the period under investigation, we downloaded the daily prices of the S&P
 
 ## Analysis Section <a name="section3"></a>
 
-Here are some graphs that we created in our analysis. We saved them to the `pics/` subfolder and include them via the usual markdown syntax for pictures.
+We calculate difference between company daily return value and market (SP500) daily return value, and save it into new column('diff')
+
+### Regression 1 (Laid Off Count vs diff)
+<br>
+![image](https://user-images.githubusercontent.com/111511037/235481640-f1f61541-291e-4cc4-95f4-e55e7f643357.png)
+
+<img class="img-circle" src="code/regression 1.png" width="50%">
+
+### Regression 2 (log(Laid Off Count) vs diff)
+<br>
+![image](https://user-images.githubusercontent.com/111511037/235482715-3d0ea98b-4855-4d9f-9766-c03f61e29289.png)
+
+<img class="img-circle" src="code/regression 2.png" width="50%">
+
+### Regression 3 (Percentage vs diff)
+<br>
+![image](https://user-images.githubusercontent.com/111511037/235482903-aa826945-3925-4fd1-b275-2798f5ffb93c.png)
+
+<img class="img-circle" src="code/regression 3.png" width="50%">
+
+Here are some graphs that we created in our analysis.
 
 [top 10 location layoff](https://htmlpreview.github.io/?https://github.com/sizhewanglehigh/3guys/blob/main/top%2010%20location%20layoff.html)
 
