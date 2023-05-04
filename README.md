@@ -156,15 +156,15 @@ Overall, we found that there was no significant correlation between a company's 
 ## About the team
 <img src="031013c219dd41d2366805bc591182e.jpg" alt="Damon" width='300'/>
 <br>
-Damon is a Master student at Lehigh studying Business Analytics.
+Chengxi Wu. Master of Business Analytics, Lehigh University
 <br><br><br>
 <img src="selfie.jpg" alt="Sizhe" width='300'/>
 <br>
-Sizhe is a Master student at Lehigh studying Business Analytics.
+Sizhe Wang. Master of Business Analytics, Lehigh University
 <br><br><br>
 <img src="a2b8ec7db8bde8ded08644bef9769e2.jpg" alt="Jerrick" width='300'/>
 <br>
-Jerrick is a MBA student at Lehigh University
+Jerrick Ren, 1MBA, Lehigh University
 
 ## More 
 
