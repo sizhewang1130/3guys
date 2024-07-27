@@ -6,6 +6,7 @@ This is a website to showcase our final project for FIN 377 - Data Science for F
 - [data.ipynb](https://github.com/sizhewanglehigh/3guys/blob/main/data.ipynb)
 - [code.ipynb](https://github.com/sizhewanglehigh/3guys/blob/main/code.ipynb)
 - [data visualization.ipynb](https://github.com/sizhewanglehigh/3guys/blob/main/Data%20Visualization.ipynb)
+- _**[PowerPoint](https://www.canva.com/design/DAFhyAXEE8Y/YhLW6lIAGKmPV5tHLZ1czg/view?utm_content=DAFhyAXEE8Y&utm_campaign=designshare&utm_medium=link&utm_source=editor)**_
 
 ## Table of contents
 1. [Introduction](#introduction)
